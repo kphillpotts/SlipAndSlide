@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<local:BaseSwipeAction 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-        xmlns:local="clr-namespace:SlipAndSlide;assembly=SlipAndSlide"
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:BaseSwipeAction x:Class="SlipAndSlide.LeftContext" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SlipAndSlide;assembly=SlipAndSlide">
 
-    x:Class="SlipAndSlide.LeftContext">
-	<ContentView.Content>
-                <Grid BackgroundColor="Blue">
-            <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>   
-                <ColumnDefinition Width="AUTO"/>
-            </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-            <Label Text="Schedule" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start"/>
-        </Grid>
-	</ContentView.Content>
+        <Label FontSize="Micro" Grid.Column="1" HorizontalOptions="Start" Text="Schedule" TextColor="White" VerticalOptions="Center" />
+
+    </Grid>
+
 </local:BaseSwipeAction>

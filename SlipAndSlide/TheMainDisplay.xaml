@@ -1,15 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SlipAndSlide.TheMainDisplay">
-	<ContentView.Content>
-        <Grid BackgroundColor="White">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SlipAndSlide.TheMainDisplay" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <Grid BackgroundColor="White" RowSpacing="0" Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Label Text="Hello"/>
-            <Label Text="Something Else" Grid.Row="1"/>
-            
+            <Frame
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="20"
+                HasShadow="False"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="40" />
+            <Label FontSize="Small" HorizontalOptions="Center" Text="AB" TextColor="White" VerticalOptions="Center" />
+            <StackLayout Grid.Column="1" Padding="10,0,10,0" Spacing="-4" VerticalOptions="Center">
+                <Label FontAttributes="Bold" FontSize="Medium" Text="{Binding .}" />
+                <Label FontSize="Small" Text="{Binding .}" />
+            </StackLayout>
         </Grid>
-	</ContentView.Content>
+    </ContentView.Content>
 </ContentView>

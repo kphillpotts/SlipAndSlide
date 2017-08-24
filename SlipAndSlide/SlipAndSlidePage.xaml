@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SlipAndSlide" x:Class="SlipAndSlide.SlipAndSlidePage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SlipAndSlide.SlipAndSlidePage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SlipAndSlide">
 
-    <ListView x:Name="myList"/>
+    <ListView x:Name="myList" RowHeight="60" />
+    
 </ContentPage>

@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace SlipAndSlide
 {
-    public partial class RIghtContext : BaseSwipeAction
+    public partial class RightContext : BaseSwipeAction
     {
-        public RIghtContext()
+        public RightContext()
         {
             InitializeComponent();
             ActiveBackgroundColor = Color.Blue;

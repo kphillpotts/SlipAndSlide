@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Xamarin.Forms;
 
 namespace SlipAndSlide
 {
@@ -8,17 +10,17 @@ namespace SlipAndSlide
         {
             InitializeComponent();
 
-			//myList.ItemTemplate =
-                      //new DataTemplate(typeof(PanningViewCell<TheMainDisplay, LeftContext, RIghtContext>));
-
             var template = new DataTemplate(() =>
             {
-                var rt = new RIghtContext();
+                var rt = new RightContext();
                 rt.ActionCommand = new Command((object obj) => {
-                    System.Diagnostics.Debug.WriteLine("Hello");
+                    items.Remove(obj.ToString());            
                 });
 
-                var x = new PanningViewCell(new TheMainDisplay(), new LeftContext(), rt);
+                var lt = new LeftContext();
+                lt.ActionCommand = new Command((object obj) => { ShowAlert(obj); });
+
+                var x = new PanningViewCell(new TheMainDisplay(), lt, rt);
 
                 return x;
             });
@@ -28,12 +30,18 @@ namespace SlipAndSlide
             myList.ItemSelected += (sender, e) => { myList.SelectedItem = null; };
         }
 
-		string[] items = {
-			"Glenn",
-			"Kym",
-			"Rob",
-			"Judy",
-			"Sam"
+        public async void ShowAlert(object obj)
+        {
+            await DisplayAlert("Scheduled", "Item has been scheudled", "OK");
+
+        }
+
+		ObservableCollection<string> items = new ObservableCollection<string>() {
+			"One",
+			"Two",
+			"Three",
+			"Four",
+			"Five"
 		};
 
 	}

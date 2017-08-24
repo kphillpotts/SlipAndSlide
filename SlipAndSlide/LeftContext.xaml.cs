@@ -9,6 +9,8 @@ namespace SlipAndSlide
         public LeftContext()
         {
             InitializeComponent();
+            this.ActiveBackgroundColor = Color.Orange;
+            this.InactiveBackgroundColor = Color.LightGray;
         }
     }
 }
