@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseSwipeAction 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:SlipAndSlide;assembly=SlipAndSlide"
+    x:Class="SlipAndSlide.RIghtContext"
+    >
+
+    
+    <Grid BackgroundColor="Yellow">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>   
+                <ColumnDefinition Width="AUTO"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Archive" TextColor="White" VerticalOptions="Center" HorizontalOptions="End"/>
+    </Grid>
+</local:BaseSwipeAction>
